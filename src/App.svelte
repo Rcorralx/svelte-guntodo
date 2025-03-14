@@ -1,6 +1,6 @@
 <script>
 	import Gun from "gun/gun"
-	const gun = Gun({peers:['gun-relay-x.vercel.app']}).get('todos');
+	const gun = Gun({peers:['https://gun-manhattan.herokuapp.com/gun']}).get('todos');
 	
 	// Create a local store to cache data from GUN
 	let store = {}
