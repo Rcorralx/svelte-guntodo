@@ -1,7 +1,14 @@
 <script>
 	import Gun from "gun/gun"
 	const gun = Gun({peers:['https://gun-manhattan.herokuapp.com/gun']}).get('todos');
-	
+
+        const gunLib = require("gun")
+        const server = require('http').createServer().listen(8080);
+        const gun = gunLib({
+          web: server
+          });
+        console.log(server)
+
 	// Create a local store to cache data from GUN
 	let store = {}
 	
